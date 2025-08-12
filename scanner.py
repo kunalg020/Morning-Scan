@@ -67,8 +67,7 @@ def abnormal_1min_volume_scan():
                 alerts.append(f"🔥 Abnormal 1-min Volume: {symbol} at {t_str} Vol: {row['volume']:.0f} Avg: {avg_vol:.0f}")
 
     if alerts:
-        message = "*1-Minute Abnormal Volume Scan Results:*
-" + "\n".join(alerts)
+        message = "*1-Minute Abnormal Volume Scan Results:*\n" + "\n".join(alerts)
         send_telegram_message(message)
     else:
         send_telegram_message("No abnormal 1-min volume detected.")
