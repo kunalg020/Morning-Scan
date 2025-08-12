@@ -26,8 +26,7 @@ def pre_market_scan():
             alerts.append(f"🔴 Gap Down: {symbol} Open: {open_price} Prev Close: {prev_close}")
 
     if alerts:
-        message = "*Pre-market Gap Scan Results:*
-" + "\n".join(alerts)
+        message = "*Pre-market Gap Scan Results:*\n" + "\n".join(alerts)
         send_telegram_message(message)
     else:
         send_telegram_message("No significant pre-market gaps detected today.")
