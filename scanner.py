@@ -104,8 +104,7 @@ def intraday_indicators_scan():
             alerts.append(f"📉 Short Setup: {symbol} Price: {price} RSI: {rsi:.1f}")
 
     if alerts:
-        message = "*Intraday Indicator Scan Results:*
-" + "\n".join(alerts)
+        message = "*Intraday Indicator Scan Results:*\n" + "\n".join(alerts)
         send_telegram_message(message)
     else:
         send_telegram_message("No intraday indicator setups detected.")
